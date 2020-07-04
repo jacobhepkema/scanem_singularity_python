@@ -6,7 +6,7 @@ From: continuumio/miniconda3
     environment.yml
 
 %post
-    apt-get update && apt-get install -y --no-install-recommends apt-utils build-essential make zlib
+    apt-get update && apt-get install -y --no-install-recommends apt-utils build-essential make zlib1g
     apt-get update && apt-get install -y procps
     
     ENV_NAME=$(head -1 environment.yml | cut -d' ' -f2)
