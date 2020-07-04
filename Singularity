@@ -6,6 +6,7 @@ From: continuumio/miniconda3
     environment.yml
 
 %post
+    apt-get update && apt-get install -y --no-install-recommends apt-utils
     apt-get update && apt-get install -y procps
     /opt/conda/bin/conda env create -f environment.yml
 
